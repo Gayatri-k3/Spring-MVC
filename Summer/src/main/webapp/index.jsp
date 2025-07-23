@@ -4,5 +4,6 @@
 <form action="submit">
 <input type="submit" value="submit">
 </form>
+<a href="Name.jsp">Name</a>
 </body>
 </html>

@@ -15,6 +15,6 @@ public class SummerInitializer extends AbstractAnnotationConfigDispatcherServlet
 
     @Override
     protected String[] getServletMappings() {
-        return new String[] {"/submit"};
+        return new String[] {"/submit", "/name"};
     }
 }
