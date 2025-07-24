@@ -1,20 +1,14 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Hospital</title>
-</head>
+<html>
 <body>
-<h1>Hospital Page</h1>
-<form action="hospital">
-    First name: <input type="text" name="fname">
-    Last name: <input type="text" name="lname">
-    Middle name: <input type="text" name="mName">
-    Reason
-    <input type="submit" value="submit">
+<h2>Hospital Form</h2>
+<form action="submitHospital" method="post">
+    Hospital Name: <input type="text" name="name"><br>
+    Location: <input type="text" name="location"><br>
+    Type (Govt/Private): <input type="text" name="type"><br>
+    Number of Beds: <input type="number" name="beds"><br>
+    Emergency Services: <input type="text" name="emergency"><br>
+    Contact Number: <input type="text" name="contact"><br>
+    <input type="submit" value="Submit">
 </form>
 </body>
 </html>
