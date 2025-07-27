@@ -30,9 +30,6 @@ public class OrderController {
             model.addAttribute("addOns", orderDTO.getAddOns());
             model.addAttribute("coupon", orderDTO.getCoupon());
             model.addAttribute("total", total);
-
-            model.addAttribute("name", orderDTO.getName());
-            model.addAttribute("total", total);
             return "/OrderResult.jsp";
         }
         else {

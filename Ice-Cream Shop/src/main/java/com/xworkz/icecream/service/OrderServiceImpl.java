@@ -1,6 +1,5 @@
 package com.xworkz.icecream.service;
 
-import com.sun.org.apache.xpath.internal.operations.Or;
 import com.xworkz.icecream.dto.OrderDTO;
 import org.springframework.stereotype.Service;
 
@@ -20,10 +19,10 @@ public class OrderServiceImpl implements OrderService{
         coupons.add("CODE");
         coupons.add("FRIDAY");
 
-        flavourPrices.put("Vanilla", 120.0);
-        flavourPrices.put("Chocolate", 135.0);
-        flavourPrices.put("Strawberry", 150.0);
-        flavourPrices.put("Mango", 140.0);
+        flavourPrices.put("Vanilla", 50.0);
+        flavourPrices.put("Chocolate", 60.0);
+        flavourPrices.put("Strawberry", 70.0);
+        flavourPrices.put("Mango", 80.0);
     }
     @Override
     public boolean save(OrderDTO orderDTO) {
@@ -40,10 +39,10 @@ public class OrderServiceImpl implements OrderService{
                 System.out.println("Invalid Flavour");
                 return false;
             }
-            if (!coupons.contains(orderDTO.getCoupon())){
-                System.out.println("Invalid Coupon");
-                return false;
-            }
+//            if (!coupons.contains(orderDTO.getCoupon())){
+//                System.out.println("Invalid Coupon");
+//                return false;
+//            }
             if (orderDTO.getTakeAway()==null || orderDTO.getTakeAway().isEmpty()){
                 System.out.println("TakeAway Empty");
                 return false;
@@ -59,6 +58,8 @@ public class OrderServiceImpl implements OrderService{
         Double total = price * orderDTO.getQuantity();
         if (coupons.contains(orderDTO.getCoupon())){
             total = total - (total*0.10);
+        }else {
+            return total;
         }
         return total;
     }
