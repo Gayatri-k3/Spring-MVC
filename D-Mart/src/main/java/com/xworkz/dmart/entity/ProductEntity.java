@@ -7,6 +7,7 @@ import javax.persistence.*;
 @Getter
 @Setter
 @RequiredArgsConstructor
+@ToString
 @Entity
 @Table(name = "d_mart")
 public class ProductEntity {
