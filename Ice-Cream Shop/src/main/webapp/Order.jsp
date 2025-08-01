@@ -6,8 +6,10 @@
 </head>
 <body>
 <p style="color:red;">${error}</p>
-<form action="submitOrder" method="post">
+<form action="submitOrder" method="post" enctype="multipart/form-data">
     <div class="order-box">
+
+    <input type="file" name="multipartFile" id="profile" placeholder="Upload" required>
         <label>Name:
             <input type="text" name="name" required/>
         </label>
